@@ -3,11 +3,10 @@ from django.shortcuts import get_object_or_404
 from .pdf import generate_invoice_pdf
 from rest_framework.decorators import api_view
 
-# Create your views here.
-
 from rest_framework import generics
 from .models import Customer, Invoice
 from .serializers import CustomerSerializer, InvoiceSerializer
+# Create your views here.
 
 class CustomerListCreate(generics.ListCreateAPIView):
     queryset = Customer.objects.all()
